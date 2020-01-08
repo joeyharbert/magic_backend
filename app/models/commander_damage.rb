@@ -1,0 +1,2 @@
+class CommanderDamage < ApplicationRecord
+end
