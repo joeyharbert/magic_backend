@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     get '/games/:id' => 'games#show'
+    post '/games/' => 'games#create'
   end
 end
