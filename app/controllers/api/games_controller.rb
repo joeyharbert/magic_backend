@@ -35,4 +35,11 @@ class Api::GamesController < ApplicationController
       render json: {errors: @game.errors.full_messages}, status: :bad_request
     end
   end
+
+  def destroy
+    game = Game.find(params[:id])
+    if game.destroy 
+      render json: {message: "Game #{game.id} deleted"}
+    end
+  end
 end

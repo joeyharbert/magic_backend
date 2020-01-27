@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
+    #games
     get '/games/:id' => 'games#show'
     post '/games/' => 'games#create'
+    delete 'games/:id' => 'games#destroy'
+
+    #players
+    get '/players/:id' => 'players#show'
   end
 end
