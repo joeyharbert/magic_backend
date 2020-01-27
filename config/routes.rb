@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
     #players
     get '/players/:id' => 'players#show'
+    patch '/players/:id' => 'players#update'
   end
 end
